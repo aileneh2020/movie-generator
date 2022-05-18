@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<hmtl lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Random Movie Generator">
+        <meta name="author" content="Ailene Hoang">
+        <title>Random Movie Generator</title>
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/responsive.css">
+    </head>
+    <body>
+        <header>
+            <h1>Random Movie Generator</h1>
+            <p>When you need a little inspiration for movie night</p>
+            <img src="https://cdn.pixabay.com/photo/2012/04/12/13/16/clapperboard-29986_960_720.png" alt="clapperboard">
+        </header>
+        <main>
+            <form id="prompt-form" action="index.html" method="post">
+                <label for="genre-selector">Select Genre</label><br>
+                <select id="genre-selector" name="genre-selector">
+                    <option value="random">Random</option>
+                    <option value="action">Action</option>
+                    <option value="comedy">Comedy</option>
+                    <option value="documentary">Documentary</option>
+                    <option value="drama">Drama</option>
+                    <option value="family">Family</option>
+                    <option value="psychological">Psychological</option>
+                    <option value="romance">Romance</option>
+                    <option value="science fiction">Science Fiction</option>
+                    <option value="thriller">Thriller</option>
+                </select><br>
+                <button type="submit" id="submit-button" value="submit">Go</button>
+            </form>
+            <section id="results-container">
+                <h3 id="results-title">Here Are Some Suggestions...</h3>
+                <div id="results">
+                    <hr>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p id="footer-text"></p>
+        </footer>
+	    <script src="app.js"></script>
+    </body>
+</hmtl>

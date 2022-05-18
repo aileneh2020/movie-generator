@@ -1,0 +1,21 @@
+@media screen and (max-width: 430px) {
+    #prompt-form {
+        max-width: 300px
+    }
+
+    #prompt-form label {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 550px) {
+    #results {
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    #results {
+        width: 500px;
+    }
+}
