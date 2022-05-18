@@ -1,4 +1,4 @@
-const apiKey = "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";
+const apiKey = "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";
 
 window.addEventListener('DOMContentLoaded', (e) => {
     setFooterText();
