@@ -1,8 +1,37 @@
 body {
     position: relative;
     min-height: 100vh;
-    font-family: 'Tahoma', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-size: 18px;
+    display: flex;
+    justify-content: center;
+    background-color: #222222;
+    background-image: url('https://cdn.pixabay.com/photo/2020/06/07/20/49/filmstrip-5272092_960_720.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.6);
+    z-index: -1;
+} 
+
+
+#app-container {
+    margin: 50px auto 80px;
+    width: 90%;
+    min-height: 80%;
+    border: 1px solid #cccccc;
+    border-radius: 30px;
+    background-color: #f5f5f5;
 }
 
 hr {
@@ -17,12 +46,12 @@ header {
 
 header h1 {
     margin-bottom: -6px;
-    color: #196620;
+    color: #002952;
 }
 
 header p {
     font-style: italic;
-    color: #196620;
+    color: #002952;
 }
 
 header img {
@@ -34,9 +63,10 @@ header img {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     margin: auto;
     padding-bottom: 40px;
-    width: 400px;
+    width: 95%;
 }
 
 #prompt-form label {
@@ -55,15 +85,15 @@ header img {
 #submit-button {
     width: 70px;
     height: 40px;
-    background-color: #196620;
+    background-color: #002952;
     color: white;
     font-size: 0.9em;
-    border: 1px solid #196620;
+    border: 1px solid #002952;
     border-radius: 3px;
 }
 
 #submit-button:hover {
-    background-color: #95bf47;
+    background-color: #3e92cc;
     border: none;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     cursor: pointer;
@@ -74,7 +104,7 @@ header img {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding-bottom: 80px;
+    padding-bottom: 60px;
 }
 
 #results-title {
@@ -84,15 +114,22 @@ header img {
 }
 
 #results {
-    width: 90%;
-    min-width: 300px;
+    width: 86%;
     font-size: 0.9em;
+}
+
+.list-item {
+    margin-bottom: 16px;
+    padding: 16px 12px;
+    border-radius: 5px;
+    background-color: #3e92cc;
+    color: #f5f5f5;
 }
 
 footer {
     position: absolute;
     bottom: 0;
-    width: 100%;
+    width: 90%;
     height: 40px;
     padding: 80px auto 0;
     text-align: center;
@@ -100,4 +137,5 @@ footer {
 
 #footer-text {
     font-size: 0.7em;
+    color: #ffffff;
 }
