@@ -17,10 +17,12 @@ header {
 
 header h1 {
     margin-bottom: -6px;
+    color: #196620;
 }
 
 header p {
     font-style: italic;
+    color: #196620;
 }
 
 header img {
@@ -53,16 +55,17 @@ header img {
 #submit-button {
     width: 70px;
     height: 40px;
-    background-color: #184bb8;
+    background-color: #196620;
     color: white;
     font-size: 0.9em;
-    border: 1px solid #184bb8;
+    border: 1px solid #196620;
     border-radius: 3px;
 }
 
 #submit-button:hover {
-    background-color: #386fe5;
+    background-color: #95bf47;
     border: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     cursor: pointer;
 }
 

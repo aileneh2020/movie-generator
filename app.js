@@ -1,4 +1,4 @@
-const apiKey = "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";
+import OPENAI_API_KEY from "./apikey.js";
 
 window.addEventListener('DOMContentLoaded', (e) => {
     setFooterText();
@@ -50,7 +50,7 @@ function getResponse(e) {
         method: "POST",
         headers: {
             "Content-Type": "application/json", 
-            Authorization: `Bearer ${apiKey}`,
+            Authorization: `Bearer ${OPENAI_API_KEY}`,
         },
         body: JSON.stringify(data),
     })
