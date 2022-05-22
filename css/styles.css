@@ -6,7 +6,7 @@ body {
     display: flex;
     justify-content: center;
     background-color: #222222;
-    background-image: url('https://cdn.pixabay.com/photo/2020/06/07/20/49/filmstrip-5272092_960_720.jpg');
+    background-image: url('/img/filmstrip.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -24,7 +24,6 @@ body {
     z-index: -1;
 } 
 
-
 #app-container {
     margin: 50px auto 80px;
     width: 90%;
@@ -32,10 +31,6 @@ body {
     border: 1px solid #cccccc;
     border-radius: 30px;
     background-color: #f5f5f5;
-}
-
-hr {
-    border-top: 1px solid #ccc;
 }
 
 header {
@@ -52,11 +47,6 @@ header h1 {
 header p {
     font-style: italic;
     color: #002952;
-}
-
-header img {
-    padding: 20px 20px 10px;
-    height: 80px;
 }
 
 #prompt-form {
