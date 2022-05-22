@@ -1,11 +1,8 @@
 import OPENAI_API_KEY from "./apikey.js";
 
-window.addEventListener('DOMContentLoaded', (e) => {
-    setFooterText();
-})
+/********** FUNCTIONS **********/
 
-document.getElementById('submit-button').addEventListener('click', getResponse);
-
+// obtains current year to add to footer text
 function setFooterText() {
     const currentYr = new Date().getFullYear();
 
@@ -13,6 +10,12 @@ function setFooterText() {
     "&copy " + currentYr + " Ailene Hoang";
 }
 
+// change results section from hidden to visible after a response is received
+function displayResults() {
+    document.getElementById('results-container').style.visibility = "visible";
+}
+
+// prepares prompt with the selected genre added
 function generatePrompt(genre) {
     return `Suggest a movie to watch.
     
@@ -28,12 +31,7 @@ function generatePrompt(genre) {
     Movies:`;
 }
 
-/** change results section from hidden to visible after a request is made **/
-function displayResults() {
-    document.getElementById('results-container').style.visibility = "visible";
-}
-
-/** send request to OpenAI API and obtain a response **/
+// send request to OpenAI API and obtain a response
 function getResponse(e) {
     const selectedGenre = document.getElementById('genre-selector').value;
     const capitalizedGenre = selectedGenre[0].toUpperCase() + selectedGenre.slice(1).toLowerCase();
@@ -56,9 +54,6 @@ function getResponse(e) {
     })
     .then(response => response.json())
     .then(data => {
-        /** add results in a list from newest to oldest **/
-        // document.getElementById('results').insertAdjacentHTML('afterbegin', `<hr><br><strong>Genre:</strong>  ${capitalizedGenre}<br>
-        // <strong>Movie Recommendation:</strong>  ${data.choices[0].text}<br><br>`);
         document.getElementById('results').insertAdjacentHTML('afterbegin', `<div class="list-item"><strong>Genre:</strong>  ${capitalizedGenre}<br>
         <strong>Movie Recommendation:</strong>  ${data.choices[0].text}</div>`);
     })
@@ -71,3 +66,12 @@ function getResponse(e) {
     displayResults();
 }
 
+/********** EVENT LISTENERS **********/
+
+// sets footer text once page is loaded
+window.addEventListener('DOMContentLoaded', (e) => {
+    setFooterText();
+})
+
+// calls getResponse function when button is clicked
+document.getElementById('submit-button').addEventListener('click', getResponse);
