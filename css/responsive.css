@@ -1,21 +1,25 @@
-@media screen and (max-width: 430px) {
-    #prompt-form {
-        max-width: 300px
+@media screen and (max-width: 343px) {
+    #genre-selector {
+        margin: 0 5px 10px 5px;
     }
+}
 
+@media screen and (max-width: 467px) {
     #prompt-form label {
         display: none;
     }
 }
 
-@media screen and (min-width: 550px) {
+@media screen and (min-width: 600px) {
+    #app-container {
+        width: 540px;
+    }
+ 
     #results {
         width: 80%;
     }
-}
 
-@media screen and (min-width: 700px) {
-    #results {
-        width: 500px;
+    footer {
+        width: 540px;
     }
 }
