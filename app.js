@@ -57,8 +57,10 @@ function getResponse(e) {
     .then(response => response.json())
     .then(data => {
         /** add results in a list from newest to oldest **/
-        document.getElementById('results').insertAdjacentHTML('afterbegin', `<hr><br><strong>Genre:</strong>  ${capitalizedGenre}<br>
-        <strong>Movie Recommendation:</strong>  ${data.choices[0].text}<br><br>`);
+        // document.getElementById('results').insertAdjacentHTML('afterbegin', `<hr><br><strong>Genre:</strong>  ${capitalizedGenre}<br>
+        // <strong>Movie Recommendation:</strong>  ${data.choices[0].text}<br><br>`);
+        document.getElementById('results').insertAdjacentHTML('afterbegin', `<div class="list-item"><strong>Genre:</strong>  ${capitalizedGenre}<br>
+        <strong>Movie Recommendation:</strong>  ${data.choices[0].text}</div>`);
     })
     .catch(error => {
         console.log("Something Went Wrong", error);
